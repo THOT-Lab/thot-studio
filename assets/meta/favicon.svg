@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Thot Studio">
+  <defs>
+    <!-- matière mate : dégradé doux, pas de reflet spéculaire franc -->
+    <radialGradient id="ts-body" cx="38%" cy="32%" r="78%">
+      <stop offset="0" stop-color="#5E8287"/>
+      <stop offset="0.55" stop-color="#2F4B4F"/>
+      <stop offset="1" stop-color="#14211F"/>
+    </radialGradient>
+    <!-- l'intérieur : le contenu, une lueur ocre -->
+    <radialGradient id="ts-core" cx="35%" cy="50%" r="80%">
+      <stop offset="0" stop-color="#F3C27E"/>
+      <stop offset="0.45" stop-color="#D0793F"/>
+      <stop offset="1" stop-color="#5A2A18"/>
+    </radialGradient>
+    <linearGradient id="ts-lip" x1="0" x2="1">
+      <stop offset="0" stop-color="#0B1413" stop-opacity=".85"/>
+      <stop offset="1" stop-color="#0B1413" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="ts-grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="1.1" numOctaves="2" seed="7"/>
+      <feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .22 0"/>
+      <feComposite in2="SourceGraphic" operator="in"/>
+    </filter>
+    <clipPath id="ts-clip"><circle cx="100" cy="100" r="84"/></clipPath>
+  </defs>
+  <!-- la sphère -->
+  <circle cx="100" cy="100" r="84" fill="url(#ts-body)"/>
+  <!-- l'ouverture : une fente en amande sur le flanc, on peut entrer / sortir -->
+  <g clip-path="url(#ts-clip)">
+    <path d="M128 30 C 160 62 160 138 128 170 C 112 138 112 62 128 30 Z" fill="url(#ts-core)"/>
+    <path d="M128 30 C 112 62 112 138 128 170 C 121 138 121 62 128 30 Z" fill="url(#ts-lip)"/>
+    <circle cx="100" cy="100" r="84" fill="#000" filter="url(#ts-grain)"/>
+  </g>
+  <!-- le seuil : un fin anneau, la frontière du contenant -->
+  <circle cx="100" cy="100" r="92" fill="none" stroke="#A5D5B9" stroke-opacity=".35" stroke-width="1.2"/>
+</svg>
