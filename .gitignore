@@ -1,5 +1,2 @@
-# Données internes (prospects, appels d'offres, notes) : gardées dans Central, jamais publiées
-data/prospects.js
-data/appels.js
 .DS_Store
 assets/qr/

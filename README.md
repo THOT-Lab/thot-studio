@@ -3,7 +3,7 @@
 Site publié : https://thot-lab.github.io/thot-studio/
 
 Branche art de THOT : curation immersive (scénographie digitale, multi-écrans, VR, design vidéo et sonore).
-La version publiée n'a pas l'onglet « Réflexion interne » : ses données (`data/prospects.js`, `data/appels.js`) sont exclues de Git et n'existent que dans Central, où l'onglet apparaît automatiquement.
+L'onglet « Réflexion interne » (`#interne`) est publié comme le reste : données dans `data/prospects.js` et `data/appels.js`.
 
 Dans Central : `/internet-website/thot-studio/` (tuile Thot Studio).
 
