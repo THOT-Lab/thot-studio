@@ -294,31 +294,37 @@ const smooth = (a, b, t) => { t = Math.min(1, Math.max(0, (t - a) / (b - a))); r
       },
       opt(s) { blip([300, 900, 440][s.o], .6, 'sine'); }
     },
-    orage: {
-      init(s) { s.flash = 0; s.drops = Array.from({ length: 120 }, () => ({ x: R() * 480, y: R() * 270, h: R() * 360 })); },
+    meteo: {
+      init(s) { s.flash = 0; s.drops = Array.from({ length: 140 }, () => ({ x: R() * 480, y: R() * 270, r: 1 + R() * 2.5, v: .5 + R() })); },
       draw(c, s, T) {
-        c.fillStyle = '#0a1120'; c.fillRect(0, 0, 480, 270);
-        if (R() < (s.o === 1 ? .03 : .012)) { s.flash = 1; s.bx = 60 + R() * 360; setTimeout(() => rumble(s.o === 1 ? 1.6 : 1, (s.bx - 240) / 240), s.o === 1 ? 50 : 600); }
+        const g = c.createLinearGradient(0, 0, 0, 270);
+        g.addColorStop(0, ['#0a1222', '#1a2630', '#2a3644'][s.o]); g.addColorStop(1, ['#16202c', '#2a3a40', '#c9d4dc'][s.o]);
+        c.fillStyle = g; c.fillRect(0, 0, 480, 270);
+        // nuages en relief
+        for (let k = 0; k < 6; k++) { const x = (k * 110 + T * 12) % 600 - 60, y = 30 + (k % 2) * 16, gr = c.createRadialGradient(x, y - 8, 4, x, y, 70); gr.addColorStop(0, s.o === 2 ? 'rgba(240,245,250,.5)' : 'rgba(120,135,155,.55)'); gr.addColorStop(1, 'rgba(0,0,0,0)'); c.fillStyle = gr; c.fillRect(x - 70, y - 70, 140, 140); }
+        if (s.o === 0 && R() < .02) { s.flash = 1; s.bx = 60 + R() * 360; setTimeout(() => rumble(1.3, (s.bx - 240) / 240), 300); }
         if (s.flash > 0) {
-          c.fillStyle = `rgba(220,230,255,${s.flash * (s.o === 1 ? .35 : .15)})`; c.fillRect(0, 0, 480, 270);
-          c.strokeStyle = `rgba(255,255,240,${s.flash})`; c.lineWidth = s.o === 1 ? 3 : 1.5; c.beginPath(); let x = s.bx, y = 0; c.moveTo(x, y);
-          while (y < (s.o === 1 ? 230 : 120)) { x += (R() - .5) * 26; y += 14; c.lineTo(x, y); } c.stroke(); s.flash -= .07;
+          c.fillStyle = `rgba(220,230,255,${s.flash * .25})`; c.fillRect(0, 0, 480, 270);
+          c.strokeStyle = `rgba(255,255,240,${s.flash})`; c.lineWidth = 2.5; c.shadowColor = '#bcd'; c.shadowBlur = 12; c.beginPath(); let x = s.bx, y = 40; c.moveTo(x, y);
+          while (y < 200) { x += (R() - .5) * 26; y += 14; c.lineTo(x, y); } c.stroke(); c.shadowBlur = 0; s.flash -= .07;
         }
-        for (const d of s.drops) { d.y = (d.y + 6) % 280; d.x = (d.x + 1) % 480; c.strokeStyle = s.o === 2 ? `hsla(${d.h + T * 60},90%,65%,.8)` : 'rgba(150,180,220,.45)'; c.lineWidth = s.o === 2 ? 2 : 1; c.beginPath(); c.moveTo(d.x, d.y); c.lineTo(d.x - 2, d.y - 9); c.stroke(); }
-        // enceintes autour
-        [[30, 40], [450, 40], [30, 230], [450, 230]].forEach(([x, y], k) => { c.fillStyle = '#2F4B4F'; c.fillRect(x - 8, y - 8, 16, 16); c.strokeStyle = `rgba(255,212,59,${s.flash * .8})`; c.beginPath(); c.arc(x, y, 14 + s.flash * 20, 0, TAU); c.stroke(); });
-        visitor(c, 240, 250, 1.1);
+        for (const d of s.drops) {
+          if (s.o === 2) { d.y += d.v * .7; d.x += Math.sin(T + d.r * 3) * .6; if (d.y > 262) d.y = -5; c.fillStyle = 'rgba(255,255,255,.9)'; c.beginPath(); c.arc(d.x % 480, d.y, d.r, 0, TAU); c.fill(); }
+          else { d.y = (d.y + (s.o === 1 ? 9 : 6) * d.v) % 280; d.x = (d.x + (s.o === 1 ? .5 : 2)) % 480; c.strokeStyle = 'rgba(170,195,225,.5)'; c.lineWidth = 1.2; c.beginPath(); c.moveTo(d.x, d.y); c.lineTo(d.x - (s.o === 1 ? 1 : 4), d.y - 10); c.stroke(); }
+        }
+        c.fillStyle = s.o === 2 ? '#eef3f6' : '#1d2a2c'; c.fillRect(0, 252, 480, 18);
+        visitor(c, 240, 252, 1.1, s.o === 2 ? '#2F4B4F' : '#E9EFEC');
       },
-      opt(s) { s.o === 2 ? [523, 659, 784].forEach((f, i) => setTimeout(() => blip(f, .3, 'triangle', i - 1), i * 90)) : rumble(); }
+      opt(s) { s.o === 0 ? rumble() : blip([0, 220, 880][s.o], .5, 'sine'); }
     },
     parfum: {
       init(s) { s.p = []; },
       draw(c, s, T) {
         c.fillStyle = '#0d1412'; c.fillRect(0, 0, 480, 270);
-        const col = [[120, 85, 60], [210, 160, 60], [255, 110, 40]][s.o], name = ['terre', 'résine', 'feu'][s.o];
-        [[60, 220], [420, 220], [240, 40]].forEach(([x, y]) => { c.fillStyle = '#2F4B4F'; c.beginPath(); c.arc(x, y, 12, 0, TAU); c.fill(); if (R() < .9) s.p.push({ x, y, vx: (240 - x) / 160 + (R() - .5), vy: (190 - y) / 160 + (R() - .5), a: 1, r: 3 + R() * 6 }); });
-        s.p = s.p.filter(p => (p.a -= .006) > 0);
-        for (const p of s.p) { p.x += p.vx + Math.sin(T * 2 + p.r) * .5; p.y += p.vy + Math.cos(T * 2 + p.r) * .4; p.r += .08; c.fillStyle = `rgba(${col},${p.a * .5})`; c.beginPath(); c.arc(p.x, p.y, p.r, 0, TAU); c.fill(); }
+        const col = [[150, 142, 132], [168, 166, 150], [158, 150, 150]][s.o], name = ['terre', 'résine', 'feu'][s.o];
+        [[60, 220], [420, 220], [240, 40]].forEach(([x, y]) => { c.fillStyle = '#2F4B4F'; c.beginPath(); c.arc(x, y, 12, 0, TAU); c.fill(); if (R() < .5) s.p.push({ x, y, vx: ((240 - x) / 160 + (R() - .5)) * .4, vy: ((190 - y) / 160 + (R() - .5)) * .4, a: 1, r: 6 + R() * 8 }); });
+        s.p = s.p.filter(p => (p.a -= .004) > 0);
+        for (const p of s.p) { p.x += p.vx + Math.sin(T * 2 + p.r) * .5; p.y += p.vy + Math.cos(T * 2 + p.r) * .4; p.r += .08; c.fillStyle = `rgba(${col},${p.a * .2})`; c.beginPath(); c.arc(p.x, p.y, p.r, 0, TAU); c.fill(); }
         visitor(c, 240, 225, 1.2);
         // le nez qui sent
         c.fillStyle = `rgba(${col},${.5 + .5 * Math.sin(T * 3)})`; c.font = '600 13px Manrope'; c.fillText(`« ${name} »`, 262, 182);
@@ -347,13 +353,19 @@ const smooth = (a, b, t) => { t = Math.min(1, Math.max(0, (t - a) / (b - a))); r
     }
   };
 
+  function gloss(c) {
+    const g = c.createLinearGradient(0, 0, 0, 120); g.addColorStop(0, 'rgba(255,255,255,.09)'); g.addColorStop(1, 'rgba(255,255,255,0)');
+    c.fillStyle = g; c.fillRect(0, 0, 480, 120);
+    const v = c.createRadialGradient(240, 135, 120, 240, 135, 300); v.addColorStop(0, 'rgba(0,0,0,0)'); v.addColorStop(1, 'rgba(0,0,0,.45)');
+    c.fillStyle = v; c.fillRect(0, 0, 480, 270);
+  }
   $$('.idea').forEach(card => {
     const k = card.dataset.idea, sc = scenes[k], cv = $('canvas', card), c = cv.getContext('2d'), s = { o: 0 };
     let visible = false; sc.init(s);
     new IntersectionObserver(e => visible = e[0].isIntersecting).observe(cv);
     $$('.opts button', card).forEach(b => b.onclick = () => { s.o = +b.dataset.o; $$('.opts button', card).forEach(x => x.classList.toggle('on', x === b)); sc.opt?.(s); });
     cv.addEventListener('click', e => { const r = cv.getBoundingClientRect(), x = (e.clientX - r.left) * 480 / r.width, y = (e.clientY - r.top) * 270 / r.height; sc.click ? sc.click(s, x, y) : blip(400 + R() * 400, .2, 'sine', (x - 240) / 240); });
-    (function loop(t) { requestAnimationFrame(loop); if (visible) sc.draw(c, s, t / 1000); })(0);
+    (function loop(t) { requestAnimationFrame(loop); if (visible) { sc.draw(c, s, t / 1000); gloss(c); } })(0);
   });
 })();
 })();

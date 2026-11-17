@@ -75,14 +75,14 @@ input[type=range]::-moz-range-thumb{width:22px;height:22px;border-radius:50%;bac
 /* ---------- exemple de projet (encadré dans l'offre) ---------- */
 .example{margin-top:34px;border:1px solid var(--line);border-radius:18px;padding:20px;background:rgba(12,19,18,.55)}
 .ex-head{display:flex;gap:14px;align-items:baseline;flex-wrap:wrap;margin-bottom:14px}
-.ex-head b{font:600 18px var(--sans)}
+.ex-head b{font:600 22px var(--sans)}.ex-head span{font-size:14px;color:var(--muted)}
 .example .ref-grid{grid-template-columns:1fr 1fr;gap:22px}
 .example .ref-main img{aspect-ratio:16/8}
 .example .stats{margin:10px 0 0;gap:8px}.example .stats b{font-size:19px}
 .example .ref-text p{font-size:14px;margin-bottom:8px}
 .example .mo-card{grid-template-columns:150px 1fr;margin-top:10px}
 .example .notch{margin-top:16px;padding-top:14px}
-.example .notch img{width:90px;height:66px}.example .notch figure{grid-template-columns:90px 1fr}
+.example .notch img{width:170px;height:118px}.example .notch figure{grid-template-columns:170px 1fr}
 /* ---------- référence ---------- */
 #reference{background:var(--deep)}
 .ref-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:36px;align-items:start}
@@ -305,3 +305,8 @@ details.aopast .aoi{background:none}
 @media (max-width:980px){.ideas{grid-template-columns:1fr 1fr}}
 @media (max-width:620px){.ideas,.pole ul{grid-template-columns:1fr}.aoi{grid-template-columns:1fr}.nav .links{margin-right:0}.scroll-cue{right:16px}}
 #pgroups{display:block}.pbtn{white-space:nowrap}
+
+.cap-top{font:600 13px var(--sans);color:var(--sun);letter-spacing:.06em;padding:0 4px 10px}
+.idea{box-shadow:0 1px 0 rgba(255,255,255,.06) inset,0 10px 24px rgba(0,0,0,.35);background:linear-gradient(180deg,#182826,#121d1b)}
+.idea canvas{border-bottom:1px solid rgba(255,255,255,.06)}
+.tech{display:block;font-size:11px;letter-spacing:.04em;color:var(--mint);margin:-4px 0 8px}
