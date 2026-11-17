@@ -96,6 +96,11 @@ const smooth = (a, b, t) => { t = Math.min(1, Math.max(0, (t - a) / (b - a))); r
   });
   new IntersectionObserver(e => visible = e[0].isIntersecting).observe(box);
   const tmp = document.createElement('canvas'); tmp.width = tmp.height = S; const tc = tmp.getContext('2d', { willReadFrequently: true });
+  // Halo diffus précalculé : des particules de brume plutôt que des pixels carrés.
+  const mist = document.createElement('canvas'); mist.width = mist.height = 24;
+  const mc = mist.getContext('2d'), halo = mc.createRadialGradient(12, 12, 0, 12, 12, 12);
+  halo.addColorStop(0, 'rgba(185,223,199,.7)'); halo.addColorStop(.35, 'rgba(165,213,185,.25)'); halo.addColorStop(1, 'rgba(165,213,185,0)');
+  mc.fillStyle = halo; mc.fillRect(0, 0, 24, 24);
 
   function frame(time) {
     requestAnimationFrame(frame);
@@ -107,21 +112,20 @@ const smooth = (a, b, t) => { t = Math.min(1, Math.max(0, (t - a) / (b - a))); r
     const k = 1 + Math.sin(T * .8) * .012 + hover * .02, ox = (mx - .5) * 10 * hover, oy = (my - .5) * 10 * hover;
     tc.save(); tc.translate(S / 2 + ox, S / 2 + oy); tc.scale(k, k); tc.drawImage(img, -S / 2, -S / 2, S, S); tc.restore();
 
-    // survol : un globe de points numériques tourne dans la sphère
+    // Survol : une brume légère tourne lentement dans la sphère.
     if (hover > .01) {
-      const R = S * .41, rot = T * .6;
+      const R = S * .41, rot = T * .25;
       for (let la = -75; la <= 75; la += 15) for (let lo = 0; lo < 360; lo += 10) {
         const phi = la * Math.PI / 180, th = lo * Math.PI / 180 + rot;
         const x = Math.cos(phi) * Math.sin(th), y = Math.sin(phi), z = Math.cos(phi) * Math.cos(th);
         if (z < -.1) continue;
-        const px = S / 2 + ox + x * R, py = S / 2 + oy + y * R * .98, a = hover * (.15 + .65 * z) * (.6 + .4 * Math.sin(T * 4 + lo * .2 + la));
-        tc.fillStyle = (lo + la) % 60 === 0 ? `rgba(243,194,126,${a})` : `rgba(165,213,185,${a})`;
-        tc.fillRect(px - 1.6, py - 1.6, 3.2, 3.2);
+        const drift = Math.sin(T * .7 + lo * .2 + la) * 3;
+        const px = S / 2 + ox + x * R + drift, py = S / 2 + oy + y * R * .98 + Math.cos(T * .5 + lo + la) * 3;
+        tc.globalAlpha = hover * (.08 + .3 * z) * (.8 + .2 * Math.sin(T * 1.2 + lo * .2 + la));
+        const size = 8 + 3 * (1 - z);
+        tc.drawImage(mist, px - size / 2, py - size / 2, size, size);
       }
-      // ligne de balayage
-      const sy = (T * 160) % S; const g = tc.createLinearGradient(0, sy - 30, 0, sy + 2);
-      g.addColorStop(0, 'rgba(165,213,185,0)'); g.addColorStop(1, `rgba(165,213,185,${.22 * hover})`);
-      tc.globalCompositeOperation = 'source-atop'; tc.fillStyle = g; tc.fillRect(0, sy - 30, S, 32); tc.globalCompositeOperation = 'source-over';
+      tc.globalAlpha = 1;
     }
 
     ctx.clearRect(0, 0, S, S);
