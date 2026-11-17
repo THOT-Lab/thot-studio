@@ -35,19 +35,18 @@ $$('[data-itab]').forEach(b => b.onclick = () => { location.hash = b.dataset.ita
 addEventListener('hashchange', route); route();
 const host = u => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch { return 'site'; } };
 
-/* prospects : boutons horizontaux qui déplient la liste en repoussant la page */
+/* prospects : bandes horizontales empilées, chacune se déplie et repousse la suite */
 if (HAS_INTERNAL) {
   const P = window.PROSPECTS.groupes, wrap = $('#pgroups');
-  wrap.innerHTML = `<div class="pbar">${P.map((g, i) => `<button class="pbtn" data-g="${i}">${esc(g.titre)} <b>${g.items.length}</b></button>`).join('')}</div><div class="ppanel"></div>`;
-  const panel = $('.ppanel', wrap);
-  $$('.pbtn', wrap).forEach(b => b.onclick = () => {
-    const open = b.classList.contains('on');
-    $$('.pbtn', wrap).forEach(x => x.classList.remove('on'));
-    if (open) { panel.style.maxHeight = '0'; panel.classList.remove('open'); return; }
-    b.classList.add('on');
-    const g = P[b.dataset.g];
-    panel.innerHTML = `<ol>${g.items.map(x => `<li><b>${esc(x.nom)} <span class="v">· ${esc(x.ville)}</span></b><p>${esc(x.pourquoi)}</p><a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(host(x.url))} ↗</a></li>`).join('')}</ol>`;
-    panel.classList.add('open'); panel.style.maxHeight = panel.scrollHeight + 'px';
+  wrap.innerHTML = P.map((g, i) => `<div class="strip"><button class="sbtn" aria-expanded="false"><span>${esc(g.titre)}</span><b>${g.items.length}</b><i>⌄</i></button>
+    <div class="ppanel"><ol>${g.items.map(x => `<li><b>${esc(x.nom)} <span class="v">· ${esc(x.ville)}</span></b><p>${esc(x.pourquoi)}</p><a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(host(x.url))} ↗</a></li>`).join('')}</ol></div></div>`).join('');
+  $$('.strip', wrap).forEach(st => {
+    const b = $('.sbtn', st), panel = $('.ppanel', st);
+    b.onclick = () => {
+      const open = b.getAttribute('aria-expanded') === 'true';
+      b.setAttribute('aria-expanded', !open); st.classList.toggle('on', !open);
+      panel.classList.toggle('open', !open); panel.style.maxHeight = open ? '0' : panel.scrollHeight + 'px';
+    };
   });
 }
 

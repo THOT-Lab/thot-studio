@@ -310,3 +310,12 @@ details.aopast .aoi{background:none}
 .idea{box-shadow:0 1px 0 rgba(255,255,255,.06) inset,0 10px 24px rgba(0,0,0,.35);background:linear-gradient(180deg,#182826,#121d1b)}
 .idea canvas{border-bottom:1px solid rgba(255,255,255,.06)}
 .tech{display:block;font-size:11px;letter-spacing:.04em;color:var(--mint);margin:-4px 0 8px}
+
+.strip{border:1px solid var(--line);border-radius:12px;background:var(--deep);margin-bottom:8px;overflow:hidden}
+.strip.on{border-color:rgba(255,212,59,.5)}
+.sbtn{width:100%;display:flex;align-items:center;gap:12px;padding:13px 16px;background:none;border:0;color:var(--ink);font:600 15px var(--sans);cursor:pointer;text-align:left}
+.sbtn span{flex:1}.sbtn b{color:var(--sun)}
+.sbtn i{font-style:normal;color:var(--muted);transition:transform .3s}
+.strip.on .sbtn i{transform:rotate(180deg)}
+.strip .ppanel{margin:0;border:0;border-top:1px solid var(--line);border-radius:0}
+.strip:not(.on) .ppanel{border-top-color:transparent}
