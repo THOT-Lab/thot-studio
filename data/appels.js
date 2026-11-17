@@ -13,7 +13,7 @@ window.APPELS = {
    "statut": "ouvert",
    "recurrence": "semestriel, prochains relevés 25 nov. 2026 et 16 juin 2027",
    "priorite": null,
-   "pourquoi": null,
+   "pourquoi": "Financement d'un outil IA pour une œuvre culturelle immersive (dépense minimale 400 k€), à évaluer avec la production.",
    "vigilance": true
   },
   {
@@ -28,7 +28,7 @@ window.APPELS = {
    "statut": "ouvert",
    "recurrence": "annuel, déc.",
    "priorite": null,
-   "pourquoi": null,
+   "pourquoi": "Projeter une œuvre immersive issue de Chiribiquete dans une sélection XR internationale, vitrine utile auprès des distributeurs et festivals.",
    "vigilance": true
   },
   {
@@ -58,7 +58,7 @@ window.APPELS = {
    "statut": "ouvert",
    "recurrence": null,
    "priorite": null,
-   "pourquoi": null,
+   "pourquoi": "Lot multimédia possible pour une salle immersive dans le parcours permanent, à vérifier dans le DCE.",
    "vigilance": false
   },
   {
@@ -73,7 +73,7 @@ window.APPELS = {
    "statut": "ouvert",
    "recurrence": "annuel, automne",
    "priorite": null,
-   "pourquoi": null,
+   "pourquoi": "Vitrine pour une œuvre documentaire XR, sélection en mars 2027, sans financement.",
    "vigilance": false
   },
   {
@@ -88,7 +88,7 @@ window.APPELS = {
    "statut": "ouvert",
    "recurrence": "annuel",
    "priorite": null,
-   "pourquoi": null,
+   "pourquoi": "Développer un outil ou modèle économique de diffusion d'une salle immersive multi-écrans, en consortium avec un partenaire européen.",
    "vigilance": true
   },
   {
@@ -103,7 +103,7 @@ window.APPELS = {
    "statut": "ouvert",
    "recurrence": "annuel, janv.",
    "priorite": null,
-   "pourquoi": null,
+   "pourquoi": "Concours étudiant VR/AR : Thot Studio ne candidate pas seul, mais pourrait encadrer une équipe qui prototype une expérience Chiribiquete.",
    "vigilance": false
   },
   {
@@ -118,7 +118,7 @@ window.APPELS = {
    "statut": "ouvert",
    "recurrence": "2 sessions par an",
    "priorite": null,
-   "pourquoi": null,
+   "pourquoi": "Écriture puis production (≤ 45 k€) d'une œuvre immersive Chiribiquete, si la société est implantée en AURA.",
    "vigilance": false
   },
   {
@@ -133,7 +133,7 @@ window.APPELS = {
    "statut": "ouvert",
    "recurrence": "2 sessions par an",
    "priorite": null,
-   "pourquoi": null,
+   "pourquoi": "Un volet pédagogique de Chiribiquete en jeu vidéo pourrait entrer dans ce fonds francilien, sous réserve d'éligibilité.",
    "vigilance": false
   },
   {
@@ -148,7 +148,7 @@ window.APPELS = {
    "statut": "ouvert",
    "recurrence": "annuel",
    "priorite": null,
-   "pourquoi": null,
+   "pourquoi": "Adapter Chiribiquete en expérience narrative jouable ; l'exigence d'une œuvre distribuée depuis 2024 est à vérifier.",
    "vigilance": false
   },
   {
@@ -163,7 +163,7 @@ window.APPELS = {
    "statut": "ouvert",
    "recurrence": "annuel, févr.",
    "priorite": null,
-   "pourquoi": null,
+   "pourquoi": "Sélection d'un documentaire immersif sur la forêt amazonienne de Chiribiquete dans la section Alternate Realities.",
    "vigilance": false
   },
   {
@@ -193,7 +193,7 @@ window.APPELS = {
    "statut": "ouvert",
    "recurrence": "annuel",
    "priorite": null,
-   "pourquoi": null,
+   "pourquoi": "Apporter au consortium les usages et contenus XR, avec un cas d'usage muséal (salle immersive de médiation).",
    "vigilance": true
   },
   {
@@ -208,7 +208,7 @@ window.APPELS = {
    "statut": "ouvert",
    "recurrence": "annuel",
    "priorite": null,
-   "pourquoi": null,
+   "pourquoi": "Solution cross-sectorielle musée/XR pour la médiation de Chiribiquete ; la création de contenu étant exclue, Thot Studio serait partenaire d'usage.",
    "vigilance": true
   },
   {
@@ -223,7 +223,7 @@ window.APPELS = {
    "statut": "ouvert",
    "recurrence": "annuel",
    "priorite": null,
-   "pourquoi": null,
+   "pourquoi": "Partenariat de médiation immersive sur l'impact sociétal du patrimoine, avec Chiribiquete comme étude de cas.",
    "vigilance": true
   },
   {
@@ -238,7 +238,7 @@ window.APPELS = {
    "statut": "ouvert",
    "recurrence": "annuel",
    "priorite": null,
-   "pourquoi": null,
+   "pourquoi": "Expérience immersive autour du patrimoine et du bien-être, à partir de la relation entre Chiribiquete et ses visiteurs.",
    "vigilance": false
   },
   {
@@ -253,7 +253,7 @@ window.APPELS = {
    "statut": "ouvert",
    "recurrence": "annuel",
    "priorite": null,
-   "pourquoi": null,
+   "pourquoi": "Réseau culture-innovation où Thot Studio pourrait se faire connaître comme studio de curation immersive.",
    "vigilance": false
   },
   {
@@ -261,8 +261,8 @@ window.APPELS = {
    "organisme": "CNC",
    "type": "Financement",
    "zone": "France",
-   "date": null,
-   "date_txt": "Dépôts trimestriels (mars, juin, sept., déc. ; jour exact à confirmer) ; commissions 11 janv., 12 avr., 5 juil., 11 oct. 2027",
+   "date": "2026-12-15",
+   "date_txt": "estimée : dépôt de décembre 2026, jour exact à confirmer",
    "url": "https://www.cnc.fr/professionnels/aides-et-financements/dispositif-pour-la-creation-artistique-multimedia-et-numerique-dicream_191324",
    "resume": "Le CNC subventionne l'écriture (8-10 k€), la préproduction (20-60 k€), la production (15-110 k€) et le portage d'œuvres immersives, avec dépôts trimestriels.",
    "statut": "a_venir",
@@ -284,21 +284,22 @@ window.APPELS = {
    "recurrence": "par vagues (3 vagues depuis 2024)",
    "priorite": null,
    "pourquoi": null,
-   "vigilance": true
+   "vigilance": true,
+   "supprimer": true
   },
   {
    "titre": "Villa Formose Immersive : France XR Prototyping Residency",
    "organisme": "Le CENTQUATRE-Paris / Taïwan",
    "type": "Résidence",
    "zone": "France",
-   "date": null,
-   "date_txt": "Édition 2026 close (8 avr.-7 mai) ; édition 2027 attendue au printemps",
+   "date": "2027-05-07",
+   "date_txt": "estimée d'après 2026 (édition 2026 close le 7 mai)",
    "url": "https://openagenda.com/ficepparis/events/villa-formose-immersive-the-france-xr-prototyping-residency-appel-a-projets-0804-greater-07052026",
    "resume": "Le CENTQUATRE-Paris et Taïwan accueillent en résidence des projets XR France-Taïwan en prototypage ; édition 2026 close.",
    "statut": "a_venir",
    "recurrence": "annuel, printemps",
    "priorite": null,
-   "pourquoi": null,
+   "pourquoi": "Prototype XR France-Taïwan à partir d'un dispositif Chiribiquete, en résidence au CENTQUATRE-Paris.",
    "vigilance": false
   },
   {
@@ -306,14 +307,14 @@ window.APPELS = {
    "organisme": "Magelis / Cnam-ENJMIN",
    "type": "Résidence",
    "zone": "France",
-   "date": null,
-   "date_txt": "Édition 2026 close 27 févr. ; prochain appel début 2027 (à confirmer)",
+   "date": "2027-02-27",
+   "date_txt": "estimée d'après 2026 (édition 2026 close le 27 févr.)",
    "url": "https://enjmin.cnam.fr/xr-creative-residency-4-1605096.kjsp",
    "resume": "Magelis et le Cnam-ENJMIN (Angoulême) accueillent des auteurs XR en résidence d'écriture avec accès à Immersity.",
    "statut": "a_venir",
    "recurrence": "annuel, début d'année",
    "priorite": null,
-   "pourquoi": null,
+   "pourquoi": "Écriture d'une œuvre XR Chiribiquete avec accès à Immersity, présentée à des producteurs en mars 2027.",
    "vigilance": false
   },
   {
@@ -329,15 +330,16 @@ window.APPELS = {
    "recurrence": "annuel, début d'année",
    "priorite": null,
    "pourquoi": null,
-   "vigilance": false
+   "vigilance": false,
+   "supprimer": true
   },
   {
    "titre": "Résidences de création immersive sous dôme (planétariums)",
    "organisme": "Cité des sciences / Universcience, CNC",
    "type": "Résidence",
    "zone": "France",
-   "date": null,
-   "date_txt": "Édition 2026 close 24 mai ; prochaine attendue au printemps 2027",
+   "date": "2027-05-24",
+   "date_txt": "estimée d'après 2026 (édition 2026 close le 24 mai)",
    "url": "https://www.cite-sciences.fr/fileadmin/fileadmin_CSI/fichiers/au-programme/activites-spectacles/planetarium/_images/VF-AAP-sous_dome-2026.pdf",
    "resume": "Universcience (Cité des sciences) et le CNC soutiennent la création immersive pour dômes de planétarium, avec diffusion en réseau ; très forte adéquation.",
    "statut": "a_venir",
@@ -351,14 +353,14 @@ window.APPELS = {
    "organisme": "Forum des images / NewImages Hub",
    "type": "Festival / sélection",
    "zone": "France",
-   "date": null,
-   "date_txt": "Appels attendus fin 2026 ; l'édition précédente clôturait au 31 déc. (inférence)",
+   "date": "2027-01-15",
+   "date_txt": "estimée d'après 2026 (édition précédente : clôture mi-janvier)",
    "url": "https://newimages-hub.com/en/newimages-festival/call-for-projects-2025-2",
    "resume": "Le Forum des images / NewImages Hub sélectionne et soutient des projets XR (compétition, marché de développement, fonds) ; festival prévu avril 2027.",
    "statut": "a_venir",
    "recurrence": "annuel, fin d'année",
    "priorite": 6,
-   "pourquoi": "Marché de développement XR : pitcher la prochaine salle immersive pour trouver coproducteurs et diffuseurs avant avril 2027.",
+   "pourquoi": "Pitcher la prochaine salle immersive au marché de développement XR pour trouver coproducteurs et diffuseurs avant avril 2027.",
    "vigilance": false
   },
   {
@@ -366,14 +368,14 @@ window.APPELS = {
    "organisme": "La Biennale di Venezia",
    "type": "Festival / sélection",
    "zone": "International",
-   "date": null,
-   "date_txt": "Soumissions 2026 closes le 29 avr. ; 2027 attendues au printemps",
+   "date": "2027-04-29",
+   "date_txt": "estimée d'après 2026 (soumissions closes le 29 avr.)",
    "url": "https://www.labiennale.org/en/cinema/2026/bcc-11-immersive",
    "resume": "La Biennale de Venise sélectionne des œuvres pour Venice Immersive, la plus grande compétition d'œuvres immersives.",
    "statut": "a_venir",
    "recurrence": "annuel, printemps",
    "priorite": null,
-   "pourquoi": null,
+   "pourquoi": "Vitrine la plus forte pour une œuvre immersive en salle, avec sélection à Venise en 2027.",
    "vigilance": true
   },
   {
@@ -381,8 +383,8 @@ window.APPELS = {
    "organisme": "La Biennale di Venezia",
    "type": "Appel à projets",
    "zone": "International",
-   "date": null,
-   "date_txt": "11e édition close 6 juil. 2026 ; prochaine édition attendue mai 2027",
+   "date": "2027-07-06",
+   "date_txt": "estimée d'après 2026 (clôture 6 juil.)",
    "url": "https://www.labiennale.org/en/news/biennale-college-cinema-international-and-immersive-calls-2026-2027",
    "resume": "La Biennale de Venise finance une œuvre immersive à hauteur de 75 k€ avec première mondiale à Venise.",
    "statut": "a_venir",
@@ -396,14 +398,14 @@ window.APPELS = {
    "organisme": "Annecy Festival / Mifa",
    "type": "Festival / sélection",
    "zone": "International",
-   "date": null,
-   "date_txt": "2026 : dépôt avant le 15 mars ; 2027 attendu début 2027",
+   "date": "2027-01-22",
+   "date_txt": "estimée d'après 2026 (clôture 22 janv.)",
    "url": "https://www.annecyfestival.com/take-part/submit-a-film",
    "resume": "Le Festival d'Annecy et le Mifa sélectionnent des œuvres XR et organisent un pitch d'expériences immersives.",
    "statut": "a_venir",
    "recurrence": "annuel, début d'année",
    "priorite": null,
-   "pourquoi": null,
+   "pourquoi": "Pitch d'expériences immersives et sélection XR devant des professionnels de l'animation et des jeux.",
    "vigilance": true
   },
   {
@@ -411,14 +413,14 @@ window.APPELS = {
    "organisme": "Festival de Cannes / Marché du Film",
    "type": "Festival / sélection",
    "zone": "International",
-   "date": null,
-   "date_txt": "Appel annuel début d'année ; 2027 non publié",
+   "date": "2027-02-20",
+   "date_txt": "estimée d'après 2026 (appel du marché clos 20 févr.)",
    "url": "https://competitionimmersive.festival-cannes.com/en/2026/01/the-immersive-market-returns-to-cannes-and-opens-the-call-for-curators-network-2026/",
    "resume": "Le Marché du Film de Cannes organise une compétition immersive et le Curators Network XR.",
    "statut": "a_venir",
    "recurrence": "annuel, début d'année",
    "priorite": null,
-   "pourquoi": null,
+   "pourquoi": "Compétition immersive et Curators Network XR : vitrine sur le Marché du Film pour une œuvre Chiribiquete.",
    "vigilance": true
   },
   {
@@ -426,14 +428,14 @@ window.APPELS = {
    "organisme": "SXSW",
    "type": "Festival / sélection",
    "zone": "International",
-   "date": null,
-   "date_txt": "Édition 2027 close 1er oct. 2026 ; prochaine ouverture été 2027",
+   "date": "2027-10-01",
+   "date_txt": "estimée d'après 2026 (clôture 1er oct.)",
    "url": "https://www.sxsw.com/film",
    "resume": "SXSW sélectionne des œuvres XR à Austin ; visibilité, pas de financement.",
    "statut": "a_venir",
    "recurrence": "annuel, été",
    "priorite": null,
-   "pourquoi": null,
+   "pourquoi": "Sélection XR à Austin en mars : vitrine internationale grand public et professionnelle, sans financement.",
    "vigilance": false
   },
   {
@@ -441,14 +443,14 @@ window.APPELS = {
    "organisme": "Sundance Institute",
    "type": "Festival / sélection",
    "zone": "International",
-   "date": null,
-   "date_txt": "Dates 2028 non publiées",
+   "date": "2027-09-21",
+   "date_txt": "estimée d'après 2026 (clôture longs métrages 21 sept.)",
    "url": "https://www.sundance.org/festivals/sundance-film-festival/submit",
    "resume": "Sundance sélectionne des œuvres immersives dans New Frontier ; cycle 2028 non publié.",
    "statut": "a_venir",
    "recurrence": "annuel",
    "priorite": null,
-   "pourquoi": null,
+   "pourquoi": "Vitrine de haut niveau pour une œuvre immersive, la section New Frontier s'intéressant à l'art et aux technologies émergentes.",
    "vigilance": false
   },
   {
@@ -456,14 +458,14 @@ window.APPELS = {
    "organisme": "IDFA",
    "type": "Festival / sélection",
    "zone": "International",
-   "date": null,
-   "date_txt": "2026 clos le 16 juin ; prochain appel mi-2027",
+   "date": "2027-06-16",
+   "date_txt": "estimée d'après 2026 (clôture 16 juin)",
    "url": "https://professionals.idfa.nl/program/festival-entries/festival-entry-regulations/",
    "resume": "IDFA DocLab sélectionne des projets interactifs et immersifs non-fiction à Amsterdam.",
    "statut": "a_venir",
    "recurrence": "annuel, mi-année",
    "priorite": null,
-   "pourquoi": null,
+   "pourquoi": "Chiribiquete est un documentaire immersif non-fiction ; DocLab est le lieu de référence pour ce format interactif.",
    "vigilance": false
   },
   {
@@ -471,14 +473,14 @@ window.APPELS = {
    "organisme": "IFFR",
    "type": "Appel à projets",
    "zone": "International",
-   "date": null,
-   "date_txt": "Phase 1 2027 close le 15 sept. 2026 ; prochain appel attendu été 2027",
+   "date": "2027-08-31",
+   "date_txt": "estimée d'après 2026 (early fee 31 août)",
    "url": "https://iffr.com/en/iffr-pro/lightroom/lightroom-expanded",
    "resume": "IFFR Lightroom (Rotterdam) accompagne des œuvres XR scalables et tournables.",
    "statut": "a_venir",
    "recurrence": "annuel, été",
    "priorite": null,
-   "pourquoi": null,
+   "pourquoi": "Accompagnement d'une œuvre XR scalable et tournable en salle, avec diffusion itinérante sur plusieurs lieux.",
    "vigilance": true
   },
   {
@@ -486,14 +488,14 @@ window.APPELS = {
    "organisme": "Ars Electronica",
    "type": "Festival / sélection",
    "zone": "International",
-   "date": null,
-   "date_txt": "Appel début janv., clôture début mars (cycle précédent)",
+   "date": "2027-03-04",
+   "date_txt": "estimée d'après 2026 (clôture 4 mars)",
    "url": "https://ars.electronica.art/prix",
    "resume": "Ars Electronica décerne des prix d'art numérique ; appel début janvier, clôture début mars.",
    "statut": "a_venir",
    "recurrence": "annuel, janv.-mars",
    "priorite": null,
-   "pourquoi": null,
+   "pourquoi": "Prix d'art numérique : visibilité internationale pour une œuvre Chiribiquete.",
    "vigilance": false
   },
   {
@@ -501,14 +503,14 @@ window.APPELS = {
    "organisme": "Lumen Prize",
    "type": "Festival / sélection",
    "zone": "International",
-   "date": null,
-   "date_txt": "Cycle 2026 clos en mai ; 2027 attendu au printemps",
+   "date": "2027-05-23",
+   "date_txt": "estimée d'après 2026 (cycle clos fin mai)",
    "url": "https://www.lumenprize.com/experiential-award-isc",
    "resume": "Le Lumen Prize récompense des œuvres immersives et interactives (Experiential Award).",
    "statut": "a_venir",
    "recurrence": "annuel, printemps",
    "priorite": null,
-   "pourquoi": null,
+   "pourquoi": "Prix Experiential pour une œuvre immersive et interactive, avec visibilité dans le champ art et technologie.",
    "vigilance": false
   },
   {
@@ -516,14 +518,14 @@ window.APPELS = {
    "organisme": "Commission européenne",
    "type": "Appel à projets",
    "zone": "UE",
-   "date": null,
-   "date_txt": "Prix 2026 clos 9 mars ; nouveaux appels à surveiller",
+   "date": "2027-03-09",
+   "date_txt": "estimée d'après 2026 (prix clos 9 mars)",
    "url": "https://starts.eu/calls",
    "resume": "La Commission européenne (S+T+ARTS) finance et récompense des projets arts-science-technologie.",
    "statut": "a_venir",
    "recurrence": "annuel",
    "priorite": null,
-   "pourquoi": null,
+   "pourquoi": "Projet arts-science-technologie sur Chiribiquete, avec un partenaire scientifique.",
    "vigilance": false
   },
   {
@@ -531,14 +533,14 @@ window.APPELS = {
    "organisme": "EMAP",
    "type": "Résidence",
    "zone": "UE",
-   "date": null,
-   "date_txt": "Date non trouvée, vérifier",
+   "date": "2027-11-06",
+   "date_txt": "estimée d'après 2026 (clôture 6 nov.)",
    "url": "https://on-the-move.org/news/european-media-art-platform-residency-programme-2027",
    "resume": "L'EMAP offre des résidences de production en art médiatique en Europe ; dates à vérifier.",
    "statut": "a_venir",
    "recurrence": "annuel",
    "priorite": null,
-   "pourquoi": null,
+   "pourquoi": "Résidence de production de deux mois en art médiatique pour développer une œuvre dans un institut européen partenaire.",
    "vigilance": false
   },
   {
@@ -546,14 +548,14 @@ window.APPELS = {
    "organisme": "Fondation Art Explora",
    "type": "Résidence",
    "zone": "France",
-   "date": null,
-   "date_txt": "Date non trouvée, vérifier",
+   "date": "2027-10-30",
+   "date_txt": "estimée d'après 2026 (clôture 30 oct.)",
    "url": "https://www.on-the-move.org/news/art-exploracite-internationale-des-arts-residency-programme-2027-france",
    "resume": "La Fondation Art Explora et la Cité internationale des arts offrent des résidences d'artistes à Paris ; dates à vérifier.",
    "statut": "a_venir",
    "recurrence": "annuel",
    "priorite": null,
-   "pourquoi": null,
+   "pourquoi": "Résidence parisienne de 3 à 6 mois avec allocation, pour un créateur de l'équipe travaillant sur une œuvre immersive.",
    "vigilance": false
   },
   {
@@ -561,14 +563,14 @@ window.APPELS = {
    "organisme": "Pro Helvetia",
    "type": "Financement",
    "zone": "Suisse / International",
-   "date": null,
-   "date_txt": "Dates 2027 contradictoires selon les sources, vérifier",
+   "date": "2027-08-31",
+   "date_txt": "source tierce (clôture 31 août 2027), dates contradictoires, à vérifier",
    "url": "https://research-funding.zhdk.ch/funding/pro-helvetia-synergies",
    "resume": "Pro Helvetia soutient (30-100 k€, 50 % max) des collaborations internationales art et technologies avec au moins un partenaire suisse ; lien naturel via le Musée Rietberg.",
    "statut": "a_venir",
    "recurrence": "annuel, automne",
    "priorite": null,
-   "pourquoi": null,
+   "pourquoi": "Collaboration art-technologie avec un partenaire suisse, lien naturel avec le Musée Rietberg de Zurich.",
    "vigilance": false
   },
   {
@@ -577,7 +579,7 @@ window.APPELS = {
    "type": "Financement",
    "zone": "Région Sud",
    "date": null,
-   "date_txt": "Dates de dépôt dans la notice, à vérifier",
+   "date_txt": "dates de dépôt à vérifier dans la notice (non trouvées)",
    "url": "https://aiden.maregionsud.fr/annexes/F_S_I_OI_ED_NOTICE.pdf",
    "resume": "La Région Sud finance le développement et la production d'œuvres immersives de structures régionales ; dates de dépôt à vérifier dans la notice.",
    "statut": "a_venir",
@@ -591,14 +593,14 @@ window.APPELS = {
    "organisme": "Ministerio de las Culturas",
    "type": "Appel à projets",
    "zone": "Colombie / Amérique latine",
-   "date": null,
-   "date_txt": "Encuentros 2026 clos le 18 janv. ; édition 2027 à surveiller",
+   "date": "2027-01-18",
+   "date_txt": "estimée d'après 2026 (Encuentros clos 18 janv.)",
    "url": "https://www.mincultura.gov.co",
    "resume": "Le ministère de la Culture de Colombie ouvre des convocatorias pour médias interactifs/VR (Encuentros, #NarrarelFuturo), utiles pour la diffusion de Chiribiquete en Colombie.",
    "statut": "a_venir",
    "recurrence": "annuel, début d'année",
    "priorite": null,
-   "pourquoi": null,
+   "pourquoi": "Diffusion de Chiribiquete en Colombie via les Encuentros et #NarrarelFuturo (VR).",
    "vigilance": true
   },
   {
@@ -614,7 +616,8 @@ window.APPELS = {
    "recurrence": "à vérifier",
    "priorite": null,
    "pourquoi": null,
-   "vigilance": false
+   "vigilance": false,
+   "supprimer": true
   },
   {
    "titre": "Interreg Europe / Euro-MED : appels patrimoine et culture",
@@ -629,21 +632,22 @@ window.APPELS = {
    "recurrence": "par programme",
    "priorite": null,
    "pourquoi": null,
-   "vigilance": false
+   "vigilance": false,
+   "supprimer": true
   },
   {
    "titre": "UNESCO : appels (FIDC, Participation Programme, Aschberg)",
    "organisme": "UNESCO",
    "type": "Financement",
    "zone": "International",
-   "date": null,
-   "date_txt": "Sessions 2026 closes, 2027 à surveiller",
+   "date": "2027-05-06",
+   "date_txt": "estimée d'après 2026 (IFCD clos 6 mai)",
    "url": "https://www.unesco.org/en/fellowships",
    "resume": "L'UNESCO finance des projets culturels et patrimoniaux (FIDC, Participation Programme) ; numérique possible.",
    "statut": "a_venir",
    "recurrence": "annuel",
    "priorite": null,
-   "pourquoi": null,
+   "pourquoi": "Financement de projets culturels internationaux (IFCD), accessible seulement via un État membre, à vérifier.",
    "vigilance": false
   },
   {
@@ -659,7 +663,8 @@ window.APPELS = {
    "recurrence": "continu",
    "priorite": null,
    "pourquoi": null,
-   "vigilance": false
+   "vigilance": false,
+   "supprimer": true
   },
   {
    "titre": "Veille marchés : BOAMP (scénographie, audiovisuel, multimédia, VR, dômes)",
@@ -673,7 +678,7 @@ window.APPELS = {
    "statut": "a_venir",
    "recurrence": "continu (veille quotidienne)",
    "priorite": null,
-   "pourquoi": null,
+   "pourquoi": "Repérer les marchés de scénographie ou multimédia pour des salles immersives de musées.",
    "vigilance": true
   },
   {
@@ -688,7 +693,7 @@ window.APPELS = {
    "statut": "a_venir",
    "recurrence": "continu (veille quotidienne)",
    "priorite": null,
-   "pourquoi": null,
+   "pourquoi": "Repérer les marchés des musées nationaux pour des dispositifs immersifs.",
    "vigilance": true
   },
   {
@@ -703,7 +708,7 @@ window.APPELS = {
    "statut": "a_venir",
    "recurrence": "continu (veille quotidienne)",
    "priorite": null,
-   "pourquoi": null,
+   "pourquoi": "Repérer les marchés européens de scénographie et audiovisuel au-dessus des seuils.",
    "vigilance": false
   },
   {
@@ -719,21 +724,22 @@ window.APPELS = {
    "recurrence": null,
    "priorite": null,
    "pourquoi": null,
-   "vigilance": false
+   "vigilance": false,
+   "supprimer": true
   },
   {
    "titre": "EIC Accelerator / Pathfinder",
    "organisme": "Commission européenne (EIC)",
    "type": "Financement",
    "zone": "UE",
-   "date": null,
-   "date_txt": "Dépôt au fil de l'eau, sessions annuelles",
+   "date": "2027-01-20",
+   "date_txt": "Accelerator 20 janv. 2027 ; Pathfinder 25 févr. 2027 (sources secondaires)",
    "url": "https://eic.ec.europa.eu",
    "resume": "La Commission européenne (EIC) finance l'innovation deeptech (Pathfinder, Accelerator), éventuellement des outils XR.",
    "statut": "a_venir",
    "recurrence": "au fil de l'eau + cut-offs annuels",
    "priorite": null,
-   "pourquoi": null,
+   "pourquoi": "Financement d'un prototype de dispositif immersif à forte composante technologique, si la société vise l'échelle européenne.",
    "vigilance": false
   },
   {
@@ -749,7 +755,8 @@ window.APPELS = {
    "recurrence": "annuel",
    "priorite": null,
    "pourquoi": null,
-   "vigilance": false
+   "vigilance": false,
+   "supprimer": true
   },
   {
    "titre": "Fondation Orange : numérique et culture",
@@ -764,7 +771,8 @@ window.APPELS = {
    "recurrence": "à vérifier",
    "priorite": null,
    "pourquoi": null,
-   "vigilance": false
+   "vigilance": false,
+   "supprimer": true
   },
   {
    "titre": "Le Fresnoy : candidatures",
@@ -779,7 +787,8 @@ window.APPELS = {
    "recurrence": "annuel",
    "priorite": null,
    "pourquoi": null,
-   "vigilance": false
+   "vigilance": false,
+   "supprimer": true
   }
  ],
  "processus": [

@@ -60,15 +60,13 @@ if (HAS_INTERNAL) {
     <div><a href="${esc(a.url)}" target="_blank" rel="noopener">${esc(a.titre)} ↗</a> <span class="o">· ${esc(a.organisme)}</span>
     <p>${esc(a.resume)}</p>${a.pourquoi ? `<p class="why">${esc(a.pourquoi)}</p>` : ''}</div></div>`;
   const byDate = (x, y) => (x.date || '9999').localeCompare(y.date || '9999');
-  const prio = A.filter(a => a.priorite).sort((x, y) => x.priorite - y.priorite);
-  const vig = A.filter(a => !a.priorite && a.vigilance && a.statut !== 'passe').sort(byDate);
-  const past = A.filter(a => !a.priorite && !vig.includes(a)).sort(byDate);
-  const steps = window.APPELS.processus || [];
-  box.innerHTML = `
-    <div class="aoh">Les 7 prioritaires <small>mise à jour du ${fmt(window.APPELS.maj)}</small></div><div class="aolist">${prio.map(a => item(a, a.priorite)).join('')}</div>
-    <div class="aoh">À surveiller <small>${vig.length} appels</small></div><div class="aolist">${vig.map(a => item(a)).join('')}</div>
-    ${steps.length ? `<div class="aoh">Le processus à suivre</div><div class="steps">${steps.map(s => `<div><b>${esc(s.titre)}</b>${esc(s.texte)}</div>`).join('')}</div>` : ''}
-    <details class="aopast"><summary>Appels déjà passés ou récurrents (${past.length})</summary><div class="aolist">${past.map(a => item(a)).join('')}</div></details>`;
+  const today = '2026-11-17', keep = A.filter(a => !a.supprimer);
+  const prio = keep.filter(a => a.priorite).sort((x, y) => x.priorite - y.priorite);
+  const vig = keep.filter(a => !a.priorite && a.date && a.date >= today).sort(byDate);
+  const strip = (t, n, body) => `<div class="strip"><button class="sbtn" aria-expanded="false"><span>${t}</span><b>${n}</b><i>⌄</i></button><div class="ppanel"><div class="aolist" style="padding:10px">${body}</div></div></div>`;
+  box.innerHTML = strip('Prioritaires, à regarder en détail', prio.length, prio.map(a => item(a, a.priorite)).join(''))
+    + strip('À surveiller', vig.length, vig.map(a => item(a)).join(''));
+  $$('.strip', box).forEach(st => { const b = $('.sbtn', st), p = $('.ppanel', st); b.onclick = () => { const o = st.classList.toggle('on'); b.setAttribute('aria-expanded', o); p.classList.toggle('open', o); p.style.maxHeight = o ? p.scrollHeight + 'px' : '0'; }; });
 })();
 
 
